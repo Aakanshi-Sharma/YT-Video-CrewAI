@@ -13,3 +13,17 @@ blog_researcher = Agent(
     tools=[],
     allow_delegation=True
 )
+
+#  create a senior blog writer agent
+
+blog_writer = Agent(
+    role="Blog Researcher from Youtube Videos",
+    goal="get the relevant video content for the topic {topic} from youtube channel",
+    verboe=True,
+    memory=True,
+    backstory=(
+        "Expert in understanding videos in AI Data Science, Machine Learning and GenAI"
+    ),
+    tools=[],
+    allow_delegation=True
+)
