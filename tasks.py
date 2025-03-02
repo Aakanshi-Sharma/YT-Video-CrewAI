@@ -11,3 +11,14 @@ research_task = Task(
     tools=[channel_tool],
     agent=blog_researcher
 )
+
+writer_task = Task(
+    description=(
+        "get the info from the youtube channel on the topic {topic}."
+    ),
+    expected_output="Summarize the info from the youtube channel video on the topic {topic}",
+    tools=[channel_tool],
+    agent=blog_writer,
+    async_execution=False,
+    output_file="new-blog-post.md"
+)
