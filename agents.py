@@ -1,4 +1,5 @@
 from crewai import Agent
+from tools import channel_tool
 
 # create a senior blog researcher
 
@@ -10,7 +11,7 @@ blog_researcher = Agent(
     backstory=(
         "Expert in understanding videos in AI data science, Machine learning and GENAI"
     ),
-    tools=[],
+    tools=[channel_tool],
     allow_delegation=True
 )
 
@@ -24,6 +25,6 @@ blog_writer = Agent(
     backstory=(
         "Expert in understanding videos in AI Data Science, Machine Learning and GenAI"
     ),
-    tools=[],
+    tools=[channel_tool],
     allow_delegation=True
 )
