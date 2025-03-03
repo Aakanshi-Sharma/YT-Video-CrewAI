@@ -1,6 +1,12 @@
 from crewai import Agent
 from tools import channel_tool
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_MODEL_NAME"] = "gpt-4-0125-preview"
 # create a senior blog researcher
 
 blog_researcher = Agent(
